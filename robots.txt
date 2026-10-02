@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://flex400.onrender.com/sitemap.xml
