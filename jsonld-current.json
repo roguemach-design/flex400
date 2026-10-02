@@ -1,0 +1,135 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RealEstateListing",
+      "@id": "https://flex400.com/#listing",
+      "url": "https://flex400.com/",
+      "name": "Flex400 Suite A — Flex Space for Lease in Yorkville, Ohio",
+      "leaseLength": "P1Y",
+      "about": [
+        {
+          "@id": "https://flex400.com/#suite-a"
+        },
+        {
+          "@id": "https://flex400.com/#floor-area"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
+        "price": 3200,
+        "priceCurrency": "USD",
+        "availabilityStarts": "2027-03-01",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": 3200,
+          "priceCurrency": "USD",
+          "unitText": "month"
+        },
+        "description": "Monthly base rent plus separately metered electric and gas. Water, sewer and standard trash included. One-year lease.",
+        "itemOffered": {
+          "@id": "https://flex400.com/#suite-a"
+        },
+        "seller": {
+          "@type": "Organization",
+          "name": "Rogue Land Development LLC"
+        }
+      }
+    },
+    {
+      "@type": [
+        "Place",
+        "Product"
+      ],
+      "@id": "https://flex400.com/#suite-a",
+      "name": "Flex400 — Suite A",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "400 Public Rd",
+        "addressLocality": "Yorkville",
+        "addressRegion": "OH",
+        "postalCode": "43971",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@id": "https://flex400.com/#building"
+      }
+    },
+    {
+      "@type": "FloorPlan",
+      "@id": "https://flex400.com/#floor-area",
+      "name": "Suite A approximate floor area",
+      "description": "±3,500 SF; area is approximate.",
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": 3500,
+        "unitCode": "FTK",
+        "unitText": "square feet",
+        "description": "Approximate floor area"
+      }
+    },
+    {
+      "@type": "Place",
+      "@id": "https://flex400.com/#building",
+      "name": "Flex400",
+      "url": "https://flex400.com/",
+      "description": "Commercial building at 400 Public Rd in Yorkville, Ohio.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "400 Public Rd",
+        "addressLocality": "Yorkville",
+        "addressRegion": "OH",
+        "postalCode": "43971",
+        "addressCountry": "US"
+      },
+      "containsPlace": [
+        {
+          "@id": "https://flex400.com/#suite-a"
+        },
+        {
+          "@id": "https://flex400.com/#suite-b"
+        }
+      ]
+    },
+    {
+      "@type": "Place",
+      "@id": "https://flex400.com/#suite-b",
+      "name": "Suite B",
+      "description": "The south unit of Flex400, occupied by Rogue Machine.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "400 Public Rd, Suite B",
+        "addressLocality": "Yorkville",
+        "addressRegion": "OH",
+        "postalCode": "43971",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@id": "https://flex400.com/#building"
+      },
+      "containsPlace": {
+        "@id": "https://roguemachstore.com/#rogue-machine"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://roguemachstore.com/#rogue-machine",
+      "name": "Rogue Machine",
+      "url": "https://roguemachstore.com/",
+      "telephone": "+1-304-639-0595",
+      "description": "CNC machine shop in Suite B, the south unit of Flex400. Visits by appointment only.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "400 Public Rd, Suite B",
+        "addressLocality": "Yorkville",
+        "addressRegion": "OH",
+        "postalCode": "43971",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@id": "https://flex400.com/#suite-b"
+      }
+    }
+  ]
+}

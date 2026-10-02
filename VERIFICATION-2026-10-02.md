@@ -1,0 +1,214 @@
+# Flex400 verification — October 2, 2026
+
+## Current metadata (exact values)
+
+```html
+<title>Flex400 | Flex Space for Lease in Yorkville, Ohio</title>
+<meta name="description" content="Flex space for lease: ±3,500 SF at $3,200/month in Yorkville OH, near Wheeling, WV. 12′×12′ overhead door, 3-phase power, climate control and paved parking.">
+<link rel="canonical" href="https://flex400.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Flex400">
+<meta property="og:title" content="Flex400 | Flex Space for Lease in Yorkville, Ohio">
+<meta property="og:description" content="±3,500 SF · $3,200/month plus electric and gas · One-year lease.">
+<meta property="og:url" content="https://flex400.com/">
+<meta property="og:image" content="https://flex400.com/assets/exterior-concept.webp">
+<meta property="og:image:alt" content="Flex400 exterior concept rendering — proposed appearance.">
+<meta name="twitter:image" content="https://flex400.com/assets/exterior-concept.webp">
+<meta name="twitter:image:alt" content="Flex400 exterior concept rendering — proposed appearance.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Flex400 | Flex Space for Lease in Yorkville, Ohio">
+<meta name="twitter:description" content="±3,500 SF · $3,200/month plus electric and gas · One-year lease.">
+```
+
+The formerly commented social-image tags were missing. They now use the existing exterior concept image, explicitly labeled as a concept in image alt metadata. Both social image URLs resolve to an HTTP 200 WebP (78,366 bytes).
+
+## Structured data
+
+PASS: JSON parsing; current Schema.org vocabulary type recognition, property domains and object ranges (63 properties); required listing values and linked graph references. This is a local vocabulary and value check, not a Google rich-result eligibility claim or an external validator certificate. Suite A is typed as Place + Product to satisfy Offer.itemOffered's expected range. Its address is 400 Public Rd, Yorkville, OH 43971; its unit is identified by its name. Price is 3200 USD per month; availability starts 2027-03-01; floor area is approximate 3500 square feet.
+
+Geo coordinates remain omitted pending verification. No placeholder coordinates were published.
+
+Current JSON-LD:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RealEstateListing",
+      "@id": "https://flex400.com/#listing",
+      "url": "https://flex400.com/",
+      "name": "Flex400 Suite A — Flex Space for Lease in Yorkville, Ohio",
+      "leaseLength": "P1Y",
+      "about": [
+        {
+          "@id": "https://flex400.com/#suite-a"
+        },
+        {
+          "@id": "https://flex400.com/#floor-area"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
+        "price": 3200,
+        "priceCurrency": "USD",
+        "availabilityStarts": "2027-03-01",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": 3200,
+          "priceCurrency": "USD",
+          "unitText": "month"
+        },
+        "description": "Monthly base rent plus separately metered electric and gas. Water, sewer and standard trash included. One-year lease.",
+        "itemOffered": {
+          "@id": "https://flex400.com/#suite-a"
+        },
+        "seller": {
+          "@type": "Organization",
+          "name": "Rogue Land Development LLC"
+        }
+      }
+    },
+    {
+      "@type": [
+        "Place",
+        "Product"
+      ],
+      "@id": "https://flex400.com/#suite-a",
+      "name": "Flex400 — Suite A",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "400 Public Rd",
+        "addressLocality": "Yorkville",
+        "addressRegion": "OH",
+        "postalCode": "43971",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@id": "https://flex400.com/#building"
+      }
+    },
+    {
+      "@type": "FloorPlan",
+      "@id": "https://flex400.com/#floor-area",
+      "name": "Suite A approximate floor area",
+      "description": "±3,500 SF; area is approximate.",
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": 3500,
+        "unitCode": "FTK",
+        "unitText": "square feet",
+        "description": "Approximate floor area"
+      }
+    },
+    {
+      "@type": "Place",
+      "@id": "https://flex400.com/#building",
+      "name": "Flex400",
+      "url": "https://flex400.com/",
+      "description": "Commercial building at 400 Public Rd in Yorkville, Ohio.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "400 Public Rd",
+        "addressLocality": "Yorkville",
+        "addressRegion": "OH",
+        "postalCode": "43971",
+        "addressCountry": "US"
+      },
+      "containsPlace": [
+        {
+          "@id": "https://flex400.com/#suite-a"
+        },
+        {
+          "@id": "https://flex400.com/#suite-b"
+        }
+      ]
+    },
+    {
+      "@type": "Place",
+      "@id": "https://flex400.com/#suite-b",
+      "name": "Suite B",
+      "description": "The south unit of Flex400, occupied by Rogue Machine.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "400 Public Rd, Suite B",
+        "addressLocality": "Yorkville",
+        "addressRegion": "OH",
+        "postalCode": "43971",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@id": "https://flex400.com/#building"
+      },
+      "containsPlace": {
+        "@id": "https://roguemachstore.com/#rogue-machine"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://roguemachstore.com/#rogue-machine",
+      "name": "Rogue Machine",
+      "url": "https://roguemachstore.com/",
+      "telephone": "+1-304-639-0595",
+      "description": "CNC machine shop in Suite B, the south unit of Flex400. Visits by appointment only.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "400 Public Rd, Suite B",
+        "addressLocality": "Yorkville",
+        "addressRegion": "OH",
+        "postalCode": "43971",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@id": "https://flex400.com/#suite-b"
+      }
+    }
+  ]
+}
+
+```
+
+## Crawl files
+
+robots.txt: HTTP 200.
+
+```text
+User-agent: *
+Allow: /
+Sitemap: https://flex400.com/sitemap.xml
+```
+
+sitemap.xml: HTTP 200. Its only URL is https://flex400.com/; no onrender.com URLs.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://flex400.com/</loc><lastmod>2026-10-02</lastmod></url></urlset>
+```
+
+## All three image alt values
+
+- Flex400
+- Flex400 exterior concept rendering in Yorkville, Ohio, showing proposed facade colors and overhead door.
+- Conceptual Suite A interior rendering, Flex400 flex space, Yorkville OH.
+
+The logo is an embedded WebP. The exterior and interior image URLs return HTTP 200.
+
+## Redirects and duplicate host
+
+- https://www.flex400.com/ returns HTTP 301 with Location: https://flex400.com/ (confirmed with curl without following redirects).
+- flex400.com and flex400.onrender.com both return HTTP 200 and serve byte-identical updated HTML. The Render address was not a separate old deployment; both hostnames belong to the same static service.
+- No onrender-only HTTP 301 was installed. Render static-site redirects match relative paths, not hostnames, and do not override existing resources. A catch-all redirect on this shared service would not provide the required host-specific behavior. The requested fallback is in place: the sole HTML page has <link rel="canonical" href="https://flex400.com/"> on both hostnames.
+- Repository inspection confirms index.html is the sole HTML content page; no additional content pages require canonical tags.
+
+Render rule documentation: https://render.com/docs/redirects-rewrites
+
+## Caption selection
+
+At the top of index.html, change INTERIOR_PHOTO_CAPTION_OPTION from "B" to "A" after replacing the concept with a real photo. A displays "Suite A interior."; B retains "Concept rendering · Illustrative, not a current property photo." Default is B. Without JavaScript, the existing B caption remains visible. A caption change does not replace the image or its alt text.
+
+## Missing or unresolved
+
+- Onrender-only HTTP 301 is unavailable through the current static host's path rules; canonical fallback used as authorized.
+- Geo coordinates and drive times remain pending owner verification, as before.
+- Interior image remains a concept rendering, correctly labeled; real photo pending.
